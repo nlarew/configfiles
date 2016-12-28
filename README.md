@@ -1,19 +1,30 @@
 ### Configuration Files
 Configuration files used to set up helpful tools on my macbook.
 
-#Homebrew
+#### Table of Contents
+1. [__Homebrew__](#homebrew)
+  - [Brew](#homebrew-brew)
+  - [Homebrew Bundle](#homebrew-bundle)
+2. [__Slate__](#slate)
+  - [Modifiers](#slate-modifiers)
+3. [__iTerm 2__](#iTerm)
+
+<a name="homebrew"/>
+# Homebrew
 ![Homebrew Logo](https://avatars2.githubusercontent.com/u/1503512?v=3&s=200)
 
 > The missing package manager for macOS :beer:
 > ###### [http://brew.sh/](http://brew.sh/)
 > ###### [https://github.com/Homebrew](https://github.com/Homebrew)
 
+<a name="homebrew-brew"/>
 #### Brew
 ######[https://github.com/Homebrew/brew](https://github.com/Homebrew/brew)
 Install Homebrew by simply entering the following command in the terminal.
 
 `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
 
+<a name="homebrew-bundle"/>
 #### Homebrew Bundle
 ######[https://github.com/Homebrew/homebrew-bundle](https://github.com/Homebrew/homebrew-bundle)
 
@@ -21,6 +32,7 @@ The `Brewfile` configuration file contains brew commands for all formulae. Brewf
 
 *Easily access homebrew-bundle with* `brew tap Homebrew/bundle`
 
+<a name="slate"/>
 # Slate
 ![Slate Logo](https://github.com/jigish/slate/blob/master/icons/IMG/icon_128.png)
 
@@ -33,6 +45,7 @@ The `.slate` file is used to configure window management. Slate looks for the co
 
 The current slate configuration (December 2016) uses several modifier key combinations with the arrow keys to manage windows.
 
+<a name="slate-modifiers"/>
 #### Modifiers
 
 | Modifier | Description | Screenshot |
@@ -44,6 +57,7 @@ The current slate configuration (December 2016) uses several modifier key combin
 | `ctrl` + `option` + `left/right arrow key` | The current window snaps in the direction of the arrow key pressed and fills 67% of the screen. | ![67% Window Snap Example](./assets/Slate/Slate_6633.png) |
 | `ctrl` + `option` + `cmd` + `left/right arrow key` | The current window snaps in the direction of the arrow key pressed and fills 33% of the screen. | See above. |
 
+<a name="iTerm"/>
 # iTerm 2
 ![iTerm 2 Icon](https://github.com/gnachman/iTerm2/blob/master/Media.xcassets/AppIcon.appiconset/icon_128x128.png)
 
