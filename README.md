@@ -31,6 +31,19 @@ The `Brewfile` configuration file contains brew commands for all formulae. Brewf
 
 The `.slate` file is used to configure window management. Slate looks for the configuration file in the Home Directory (`~ or /Users/[User]`).
 
+The current slate configuration (December 2016) uses several modifier key combinations with the arrow keys to manage windows.
+
+#### Modifiers
+
+| Modifier | Description | Screenshot |
+|---|---|---|
+| `cmd` + `up arrow` | The current window fills the screen. | ![100% Window Snap Example](./assets/Slate/Slate_FullScreen.png) |
+| `cmd` + `down arrow` | The current window centers on the screen. | ![Centered Window Snap Example](./assets/Slate/Slate_Centered.png) |
+| `cmd` + `left/right arrow key` | The current window snaps in the direction of the arrow key pressed and fills 50% of the screen. | ![50% Window Snap Example](./assets/Slate/Slate_5050.png) |
+| `cmd` + `shift` + `arrow key` | The current window snaps to a corner and fills 25% of the screen. | ![25% Window Snap Example](./assets/Slate/Slate_502525.png) |
+| `ctrl` + `option` + `left/right arrow key` | The current window snaps in the direction of the arrow key pressed and fills 67% of the screen. | ![67% Window Snap Example](./assets/Slate/Slate_6633.png) |
+| `ctrl` + `option` + `cmd` + `left/right arrow key` | The current window snaps in the direction of the arrow key pressed and fills 33% of the screen. | See above. |
+
 # iTerm 2
 ![iTerm 2 Icon](https://github.com/gnachman/iTerm2/blob/master/Media.xcassets/AppIcon.appiconset/icon_128x128.png)
 
