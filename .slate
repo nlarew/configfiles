@@ -1,0 +1,72 @@
+## Configs
+config defaultToCurrentScreen true
+config nudgePercentOf screenSize
+config resizePercentOf screenSize
+config secondsBetweenRepeat 0.1
+config checkDefaultsOnLoad true
+config focusCheckWidthMax 3000
+config windowHintsShowIcons true
+config windowHintsIgnoreHiddenWindows false
+#config windowHintsDuration 5
+config windowHintsSpread true
+#config windowHintsOrder persist
+
+## Aliases
+
+# Misc Aliases
+alias showHintsLeftHand hint QWERASDF
+alias showNormalHint hint QWERASDF
+
+alias rightmost     move screenOriginX+screenSizeX*0.33;screenOriginY   screenSizeX*0.67;screenSizeY
+alias rightless     move screenOriginX+screenSizeX*0.67;screenOriginY   screenSizeX*0.33;screenSizeY
+alias leftless      move screenOriginX-5;screenOriginY                    screenSizeX*0.33;screenSizeY
+alias leftmost      move screenOriginX-5;screenOriginY                    screenSizeX*0.67;screenSizeY
+alias middlethird   move screenOriginX+screenSizeX*0.33;screenOriginY   screenSizeX*0.34;screenSizeY
+
+alias topright      move screenOriginX+screenSizeX*0.5;screenOriginY                    screenSizeX*0.5;screenSizeY*0.5
+alias topleft       move screenOriginX-5;screenOriginY                                    screenSizeX*0.5+5;screenSizeY*0.5 #LEFT ANCHOR BUMPED 5PX LEFT
+alias botright      move screenOriginX+screenSizeX*0.5;screenOriginY+screenSizeY*0.5    screenSizeX*0.5;screenSizeY*0.5
+alias botleft       move screenOriginX-5;screenOriginY+screenSizeY*0.5                    screenSizeX*0.5+5;screenSizeY*0.5 #LEFT ANCHOR BUMPED 5PX LEFT
+
+# Default modifier (Currently Command+Alt+X - Feel free to change this, just make sure it doesn't conflict with other OSX Key Bindings)
+alias modifier cmd
+
+# Adds Hyper key (created in Seil / Karabiner to remap CapsLock to ctrl;alt
+alias hyper ctrl;alt
+alias minihyper ctrl;alt;cmd
+alias shiftcmd shift;cmd
+
+
+## Bindings
+
+# Command+Alt+Left/Right, mimics Windows' Win+Left/Right (also swaps between multiple displays!)
+#bind left:${modifier}      chain corner top-left resize:screenSizeX/2;screenSizeY | corner top-right resize:screenSizeX/2;screenSizeY previous
+#bind right:${modifier}     chain corner top-right resize:screenSizeX/2;screenSizeY | corner top-left resize:screenSizeX/2;screenSizeY next
+bind left:${modifier}       chain move  screenOriginX-5;screenOriginY                   (screenSizeX/2)+5;screenSizeY   |   move screenOriginX+screenSizeX*0.5;screenOriginY    (screenSizeX/2);screenSizeY     previous
+bind right:${modifier}      chain move  screenOriginX+screenSizeX*0.5;screenOriginY     (screenSizeX/2);screenSizeY     |   move screenOriginX-5;screenOriginY                  (screenSizeX/2)+5;screenSizeY   next
+
+bind right:${hyper} ${rightmost}
+bind right:${minihyper} ${rightless}
+bind left:${hyper} ${leftmost}
+bind left:${minihyper} ${leftless}
+bind up:${minihyper} ${middlethird}
+
+bind right:${shiftcmd} ${topright}
+bind up:${shiftcmd} ${topleft}
+bind down:${shiftcmd} ${botright}
+bind left:${shiftcmd} ${botleft}
+
+
+# Command+Up, mimics Windows' Win+Up (maximize window)
+#bind up:${modifier} corner top-left resize:screenSizeX-5;screenSizeY #THE OLD, ORIGINAL VERSION
+bind up:${modifier}     move screenOriginX-5;screenOriginY  screenSizeX+5;screenSizeY
+
+# Command+Down, mimics Windows' Win+Down (restores window).  This will move the active window to the center of the current screen and resize it to be 70% of the height and width of the current screen
+bind down:${modifier} move screenOriginX+screenSizeX*.15;screenOriginY+screenSizeY*.15 screenSizeX*.70;screenSizeY*.70
+
+
+bind e:${hyper}  ${showNormalHint}
+
+## Relaunch
+
+# Command+Alt+E, relaunches Slate for ease of testing
