@@ -66,6 +66,6 @@ The current slate configuration (December 2016) uses several modifier key combin
 > ###### [https://github.com/gnachman/iTerm2](https://github.com/gnachman/iTerm2)
 
 
-The configuration file is loaded from the path specified in the `iTerm2 -> Preferences -> General Tab`.
+The configuration file (`com.googlecode.iterm2.plist`) is loaded from the path specified in the `iTerm2 -> Preferences -> General Tab`.
 
 ![iTerm 2 Preferences Pane Screenshot - General](./assets/iTerm\ 2\ Preferences.png)
