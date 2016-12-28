@@ -1,4 +1,4 @@
-### dotfiles
+### Configuration Files
 Configuration files used to set up helpful tools on my macbook.
 
 #Homebrew
